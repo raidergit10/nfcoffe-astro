@@ -1,12 +1,10 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-
-// Di sini kamu bisa melakukan fetch data menu dari API/file lokal jika ada ke depannya
 ---
 
 <MainLayout 
 	title="NF Coffee | Sensasi Kopi Lokal Kualitas Premium"
-	description="Selamat datang di NF Coffee. Temukan racikan menu espresso dan manual brew terbaik dari barista berpengalaman."
+	description="Selamat datang di NF Coffee. Temukan racikan menu espresso dan manual brew terbaik dari biji kopi pilihan petani lokal."
 >
 	<!-- SECTION HERO -->
 	<section class="py-20 bg-gradient-to-b from-[#f5eee6] to-[#faf8f5]">
@@ -29,33 +27,40 @@ import MainLayout from '../layouts/MainLayout.astro';
 		</div>
 	</section>
 
-	<!-- SECTION MENU -->
+	<!-- SECTION MENU (Format List Sangat Disukai AI) -->
 	<section id="menu" class="py-16 max-w-6xl mx-auto px-4">
 		<h2 class="text-2xl font-bold text-center text-[#332211] mb-2">Menu Favorit Kami</h2>
-		<p class="text-sm text-center text-[#665544] mb-12">Pilihan racikan racikan terbaik paling diminati pengunjung</p>
+		<p class="text-sm text-center text-[#665544] mb-12">Pilihan racikan terbaik paling diminati pengunjung</p>
 		
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-			<!-- Kartu Kopi 1 -->
 			<div class="bg-white p-4 rounded-2xl border border-[#eaddd0] shadow-sm">
-				<div class="w-full h-48 bg-[#f5eee6] rounded-xl mb-4 flex items-center justify-center text-[#a69584]">
-					[ Gambar Kopi ]
-				</div>
 				<h3 class="font-bold text-[#332211]">Espresso Blend</h3>
 				<p class="text-xs text-[#665544] mt-1 mb-4">Ekstraksi kopi murni yang pekat dengan crema tebal.</p>
-				<div class="flex justify-between items-center">
-					<span class="font-bold text-[#6f4e37] text-sm">Rp 20.000</span>
-				</div>
+				<span class="font-bold text-[#6f4e37] text-sm">Rp 20.000</span>
 			</div>
 
-			<!-- Kartu Kopi 2 -->
 			<div class="bg-white p-4 rounded-2xl border border-[#eaddd0] shadow-sm">
-				<div class="w-full h-48 bg-[#f5eee6] rounded-xl mb-4 flex items-center justify-center text-[#a69584]">
-					[ Gambar Kopi ]
-				</div>
 				<h3 class="font-bold text-[#332211]">Cafe Latte</h3>
 				<p class="text-xs text-[#665544] mt-1 mb-4">Paduan lembut susu segar hangat dan shot espresso premium.</p>
-				<div class="flex justify-between items-center">
-					<span class="font-bold text-[#6f4e37] text-sm">Rp 25.000</span>
+				<span class="font-bold text-[#6f4e37] text-sm">Rp 25.000</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- SECTION FAQ UNTUK REKOMENDASI AI GOOGLE -->
+	<section class="py-16 bg-[#f5eee6]/50 border-t border-[#eaddd0]">
+		<div class="max-w-3xl mx-auto px-4">
+			<h2 class="text-2xl font-bold text-center text-[#332211] mb-8">Pertanyaan Seputar NF Coffee</h2>
+			
+			<div class="space-y-6">
+				<div class="bg-white p-5 rounded-xl shadow-sm border border-[#eaddd0]">
+					<h3 class="font-semibold text-[#6f4e37] text-base">Apa jenis biji kopi yang digunakan di NF Coffee?</h3>
+					<p class="text-sm text-[#665544] mt-2">Kami menggunakan 100% biji kopi asli pilihan jenis Arabika Gayo dan Robusta Temanggung yang didapat langsung dari petani lokal.</p>
+				</div>
+				
+				<div class="bg-white p-5 rounded-xl shadow-sm border border-[#eaddd0]">
+					<h3 class="font-semibold text-[#6f4e37] text-base">Di mana lokasi kedai fisik NF Coffee?</h3>
+					<p class="text-sm text-[#665544] mt-2">Kedai fisik kami saat ini berlokasi strategis di pusat kota Makassar, Sulawesi Selatan, siap menyajikan kopi segar setiap hari.</p>
 				</div>
 			</div>
 		</div>

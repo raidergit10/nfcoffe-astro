@@ -1,4 +1,6 @@
 ---
+// 1. WAJIB Import file global CSS agar Tailwind terbaca sempurna!
+import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
@@ -12,12 +14,6 @@ const {
 	description = "Nikmati pilihan biji kopi Arabika dan Robusta terbaik langsung dari petani lokal di NF Coffee. Pesan online sekarang!" 
 } = Astro.props;
 ---
-<!-- Tambahkan ini di bagian bawah src/layouts/MainLayout.astro -->
-<style is:global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-</style>
 
 <!doctype html>
 <html lang="id">
@@ -27,33 +23,32 @@ const {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		
-		<!-- Meta SEO Penting -->
+		<!-- PONDASI SEO UTAMA -->
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={Astro.site} />
 		
-		<!-- Open Graph / Facebook / WhatsApp -->
+		<!-- SOSIAL MEDIA META (OPEN GRAPH) - Agar Rapi Saat Di-share -->
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={Astro.site} />
+		<meta property="og:site_name" content="NF Coffee" />
 		
-		<!-- Google Fonts (Ganti sesuai kebutuhan tema tokomu) -->
+		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 	</head>
 	<body class="bg-[#faf8f5] text-[#332211] min-h-screen flex flex-col font-['Plus_Jakarta_Sans',sans-serif]">
 		
-		<!-- Navbar Global -->
 		<Navbar />
 
-		<!-- Konten Halaman Unik -->
 		<main class="flex-grow">
 			<slot />
 		</main>
 
-		<!-- Footer Global -->
 		<Footer />
 
 	</body>
