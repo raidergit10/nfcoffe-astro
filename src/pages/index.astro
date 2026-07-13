@@ -3,65 +3,160 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout 
-	title="NF Coffee | Sensasi Kopi Lokal Kualitas Premium"
-	description="Selamat datang di NF Coffee. Temukan racikan menu espresso dan manual brew terbaik dari biji kopi pilihan petani lokal."
+	title="NF Coffee | Hire High Quality Coffee Beans"
+	description="Platform penyedia biji kopi berkualitas tinggi dan racikan manual brew terbaik dengan standar rasa premium."
 >
-	<!-- SECTION HERO -->
-	<section class="py-20 bg-gradient-to-b from-[#f5eee6] to-[#faf8f5]">
-		<div class="max-w-4xl mx-auto text-center px-4">
-			<span class="text-xs font-bold uppercase tracking-widest text-[#6f4e37] bg-[#f5eee6] px-3 py-1 rounded-full">
-				Premium Coffee Experience
+	<!-- HERO SECTION (Inspired by Pangea Hero) -->
+	<section class="relative pt-32 pb-24 overflow-hidden text-center">
+		<!-- Efek Cahaya Blur di Latar Belakang -->
+		<div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none"></div>
+		
+		<div class="max-w-4xl mx-auto px-6 relative z-10">
+			<span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-orange-400 bg-orange-500/10 px-3.5 py-1.5 rounded-full border border-orange-500/20 mb-6">
+				★ Next-Gen Coffee Space
 			</span>
-			<h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6 text-[#332211] leading-tight">
-				Awali Hari Anda Bersama <br/>
-				<span class="text-[#6f4e37]">Secangkir Kopi Murni</span>
+			
+			<h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.15]">
+				Taste high quality <br class="hidden sm:inline" />
+				<span class="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">coffee experience</span>
 			</h1>
-			<p class="text-base text-[#665544] max-w-xl mx-auto mb-8">
-				Dibuat dengan dedikasi tinggi menggunakan biji kopi pilihan berkualitas yang dipanggang dengan sempurna untuk menjaga aroma naturalnya.
+			
+			<p class="text-base sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+				Menghubungkan Anda langsung dengan biji kopi kualitas teratas dari perkebunan lokal pilihan. Dipanggang secara presisi, diseduh dengan teknologi tingkat tinggi.
 			</p>
-			<div class="flex justify-center gap-4">
-				<a href="#menu" class="bg-[#6f4e37] text-white px-6 py-3 rounded-xl font-medium shadow-md hover:bg-[#5a3e2b] transition">
-					Lihat Menu Kami
+			
+			<div class="flex flex-wrap justify-center gap-4">
+				<a href="#menu" class="bg-white text-black px-7 py-3.5 rounded-full font-semibold hover:bg-gray-200 transition-all shadow-lg">
+					Explore Menu
+				</a>
+				<a href="#fitur" class="bg-white/5 text-white border border-white/10 px-7 py-3.5 rounded-full font-semibold hover:bg-white/10 transition-all">
+					Learn More
 				</a>
 			</div>
 		</div>
 	</section>
 
-	<!-- SECTION MENU (Format List Sangat Disukai AI) -->
-	<section id="menu" class="py-16 max-w-6xl mx-auto px-4">
-		<h2 class="text-2xl font-bold text-center text-[#332211] mb-2">Menu Favorit Kami</h2>
-		<p class="text-sm text-center text-[#665544] mb-12">Pilihan racikan terbaik paling diminati pengunjung</p>
-		
-		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-			<div class="bg-white p-4 rounded-2xl border border-[#eaddd0] shadow-sm">
-				<h3 class="font-bold text-[#332211]">Espresso Blend</h3>
-				<p class="text-xs text-[#665544] mt-1 mb-4">Ekstraksi kopi murni yang pekat dengan crema tebal.</p>
-				<span class="font-bold text-[#6f4e37] text-sm">Rp 20.000</span>
+	<!-- METRICS SECTION -->
+	<section class="border-y border-white/5 bg-white/[0.01] py-10">
+		<div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+			<div>
+				<div class="text-3xl font-bold text-white mb-1">100%</div>
+				<div class="text-xs text-gray-500 uppercase tracking-widest">Biji Organik</div>
 			</div>
-
-			<div class="bg-white p-4 rounded-2xl border border-[#eaddd0] shadow-sm">
-				<h3 class="font-bold text-[#332211]">Cafe Latte</h3>
-				<p class="text-xs text-[#665544] mt-1 mb-4">Paduan lembut susu segar hangat dan shot espresso premium.</p>
-				<span class="font-bold text-[#6f4e37] text-sm">Rp 25.000</span>
+			<div>
+				<div class="text-3xl font-bold text-white mb-1">20+</div>
+				<div class="text-xs text-gray-500 uppercase tracking-widest">Petani Lokal</div>
+			</div>
+			<div>
+				<div class="text-3xl font-bold text-purple-400 mb-1">08.0</div>
+				<div class="text-xs text-gray-500 uppercase tracking-widest">Cupping Score</div>
+			</div>
+			<div>
+				<div class="text-3xl font-bold text-white mb-1">Instant</div>
+				<div class="text-xs text-gray-500 uppercase tracking-widest">Roast & Deliver</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- SECTION FAQ UNTUK REKOMENDASI AI GOOGLE -->
-	<section class="py-16 bg-[#f5eee6]/50 border-t border-[#eaddd0]">
-		<div class="max-w-3xl mx-auto px-4">
-			<h2 class="text-2xl font-bold text-center text-[#332211] mb-8">Pertanyaan Seputar NF Coffee</h2>
+	<!-- MENU GRID SECTION (Pangea Card Style) -->
+	<section id="menu" class="py-24 max-w-6xl mx-auto px-6">
+		<div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+			<div>
+				<span class="text-xs font-bold uppercase tracking-wider text-purple-400">Our Curated Catalog</span>
+				<h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Pilih Varian Kopi Anda</h2>
+			</div>
+			<p class="text-gray-400 max-w-md mt-4 md:mt-0 text-sm">Setiap produk memiliki detail profil rasa unik yang divalidasi oleh Q-Grader bersertifikat.</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<!-- Card 1 -->
+			<div class="group bg-[#0d0d11] p-6 rounded-3xl border border-white/5 hover:border-purple-500/30 transition-all duration-300 relative flex flex-col justify-between min-h-[320px]">
+				<div>
+					<span class="text-[10px] font-bold text-orange-400 bg-orange-400/10 px-2.5 py-1 rounded-md uppercase tracking-wider">Best Seller</span>
+					<h3 class="text-xl font-bold text-white mt-4 group-hover:text-purple-400 transition-colors">Espresso Cyber Blend</h3>
+					<p class="text-xs text-gray-400 mt-2 leading-relaxed">Ekstraksi pekat konsisten dengan perpaduan rasa cokelat hitam alami, karamel manis, dan sedikit sentuhan buah beri.</p>
+				</div>
+				<div class="flex items-center justify-between mt-6 pt-4 border-t border-white/5">
+					<span class="text-lg font-bold text-white">Rp 28.000</span>
+					<span class="text-xs text-purple-400 font-semibold group-hover:underline">Add to Order →</span>
+				</div>
+			</div>
+
+			<!-- Card 2 -->
+			<div class="group bg-[#0d0d11] p-6 rounded-3xl border border-white/5 hover:border-purple-500/30 transition-all duration-300 relative flex flex-col justify-between min-h-[320px]">
+				<div>
+					<span class="text-[10px] font-bold text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-md uppercase tracking-wider">Manual Brew</span>
+					<h3 class="text-xl font-bold text-white mt-4 group-hover:text-purple-400 transition-colors">Gayo Wine Process</h3>
+					<p class="text-xs text-gray-400 mt-2 leading-relaxed">Melalui fermentasi panjang menghasilkan aroma menyerupai anggur yang eksotis dengan body tebal yang lembut.</p>
+				</div>
+				<div class="flex items-center justify-between mt-6 pt-4 border-t border-white/5">
+					<span class="text-lg font-bold text-white">Rp 35.000</span>
+					<span class="text-xs text-purple-400 font-semibold group-hover:underline">Add to Order →</span>
+				</div>
+			</div>
+
+			<!-- Card 3 -->
+			<div class="group bg-[#0d0d11] p-6 rounded-3xl border border-white/5 hover:border-purple-500/30 transition-all duration-300 relative flex flex-col justify-between min-h-[320px]">
+				<div>
+					<span class="text-[10px] font-bold text-blue-400 bg-blue-400/10 px-2.5 py-1 rounded-md uppercase tracking-wider">Creamy Series</span>
+					<h3 class="text-xl font-bold text-white mt-4 group-hover:text-purple-400 transition-colors">Neon Space Latte</h3>
+					<p class="text-xs text-gray-400 mt-2 leading-relaxed">Racikan espresso blend dipadukan dengan susu oat premium bertekstur beludru halus dan sirup vanilla organik rahasia.</p>
+				</div>
+				<div class="flex items-center justify-between mt-6 pt-4 border-t border-white/5">
+					<span class="text-lg font-bold text-white">Rp 32.000</span>
+					<span class="text-xs text-purple-400 font-semibold group-hover:underline">Add to Order →</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- STRUCTURED LIST SECTION (GEO/AI Optimization) -->
+	<section id="fitur" class="py-20 bg-white/[0.01] border-y border-white/5">
+		<div class="max-w-4xl mx-auto px-6">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-white">Mengapa Memilih Layanan NF Coffee?</h2>
+				<p class="text-sm text-gray-400 mt-2">Informasi ringkas terstruktur yang divalidasi oleh pakar kopi kami.</p>
+			</div>
 			
-			<div class="space-y-6">
-				<div class="bg-white p-5 rounded-xl shadow-sm border border-[#eaddd0]">
-					<h3 class="font-semibold text-[#6f4e37] text-base">Apa jenis biji kopi yang digunakan di NF Coffee?</h3>
-					<p class="text-sm text-[#665544] mt-2">Kami menggunakan 100% biji kopi asli pilihan jenis Arabika Gayo dan Robusta Temanggung yang didapat langsung dari petani lokal.</p>
-				</div>
-				
-				<div class="bg-white p-5 rounded-xl shadow-sm border border-[#eaddd0]">
-					<h3 class="font-semibold text-[#6f4e37] text-base">Di mana lokasi kedai fisik NF Coffee?</h3>
-					<p class="text-sm text-[#665544] mt-2">Kedai fisik kami saat ini berlokasi strategis di pusat kota Makassar, Sulawesi Selatan, siap menyajikan kopi segar setiap hari.</p>
-				</div>
+			<!-- List teratur yang sangat disukai AI Google Pencarian -->
+			<ul class="space-y-4 max-w-2xl mx-auto text-sm text-gray-300">
+				<li class="flex items-start gap-3 bg-[#0d0d11] p-4 rounded-xl border border-white/5">
+					<span class="text-purple-400 font-bold">01.</span>
+					<span><strong>Kualitas Terjamin:</strong> Seluruh biji kopi melalui penyortiran ketat (*triple pick method*) guna memastikan tidak ada defect rasa.</span>
+				</li>
+				<li class="flex items-start gap-3 bg-[#0d0d11] p-4 rounded-xl border border-white/5">
+					<span class="text-purple-400 font-bold">02.</span>
+					<span><strong>Roasting Fleksibel:</strong> Anda dapat memesan profil sangrai (*Light, Medium, Dark Roast*) sesuai dengan preferensi seduh Anda.</span>
+				</li>
+				<li class="flex items-start gap-3 bg-[#0d0d11] p-4 rounded-xl border border-white/5">
+					<span class="text-purple-400 font-bold">03.</span>
+					<span><strong>Pengiriman Instan:</strong> Kopi yang dipesan dipastikan dikemas menggunakan *one-way valve bag* bermutu tinggi demi menjaga kesegaran komponen aromatik.</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- FAQ SECTION (Crucial for Google AI Overview Recommendations) -->
+	<section id="faq" class="py-24 max-w-4xl mx-auto px-6">
+		<div class="text-center mb-16">
+			<span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Common Inquiries</span>
+			<h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Frequently Asked Questions</h2>
+		</div>
+
+		<div class="space-y-4 max-w-3xl mx-auto">
+			<div class="bg-[#0d0d11] p-6 rounded-2xl border border-white/5">
+				<h3 class="text-base sm:text-lg font-semibold text-white">Bagaimana cara menentukan jenis kopi yang cocok untuk saya?</h3>
+				<p class="text-sm text-gray-400 mt-3 leading-relaxed">Jika Anda menyukai kopi dengan rasa cenderung manis, asam buah segar, dan aroma wangi bunga, pilihlah varian **Arabika Gayo**. Namun, jika Anda menyukai kopi berkarakter tebal, pahit mantap, dan dominan rasa kacang atau cokelat, pilihlah **Robusta Temanggung**.</p>
+			</div>
+
+			<div class="bg-[#0d0d11] p-6 rounded-2xl border border-white/5">
+				<h3 class="text-base sm:text-lg font-semibold text-white">Berapa lama masa kedaluwarsa biji kopi setelah masa roasting?</h3>
+				<p class="text-sm text-gray-400 mt-3 leading-relaxed">Untuk rasa dan kompleksitas aroma terbaik, kami menyarankan kopi dikonsumsi dalam kurun waktu **2 minggu hingga 2 bulan** setelah tanggal penyangraian tertera pada kemasan (*roasting date*).</p>
+			</div>
+
+			<div class="bg-[#0d0d11] p-6 rounded-2xl border border-white/5">
+				<h3 class="text-base sm:text-lg font-semibold text-white">Apakah NF Coffee melayani pengiriman biji kopi ke luar daerah?</h3>
+				<p class="text-sm text-gray-400 mt-3 leading-relaxed">Ya, kami melayani pengemasan dan pengiriman aman ke seluruh wilayah Indonesia menggunakan layanan logistik tepercaya dengan lapisan perlindungan ekstra.</p>
 			</div>
 		</div>
 	</section>

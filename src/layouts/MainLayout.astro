@@ -1,5 +1,4 @@
 ---
-// 1. WAJIB Import file global CSS agar Tailwind terbaca sempurna!
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -10,45 +9,40 @@ interface Props {
 }
 
 const { 
-	title = "NF Coffee | Tempat Ngopi Premium & Roastery Terbaik", 
-	description = "Nikmati pilihan biji kopi Arabika dan Robusta terbaik langsung dari petani lokal di NF Coffee. Pesan online sekarang!" 
+	title = "NF Coffee | Cyber Roastery & Premium Experience", 
+	description = "Nikmati pilihan biji kopi Arabika dan Robusta terbaik dengan konsep modern futuristik di NF Coffee." 
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		
-		<!-- PONDASI SEO UTAMA -->
+		<!-- SEO Basics -->
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<meta name="robots" content="index, follow" />
-		<link rel="canonical" href={Astro.site} />
 		
-		<!-- SOSIAL MEDIA META (OPEN GRAPH) - Agar Rapi Saat Di-share -->
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:url" content={Astro.site} />
-		<meta property="og:site_name" content="NF Coffee" />
-		
-		<!-- Google Fonts -->
+		<!-- Google Fonts Integration -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-[#faf8f5] text-[#332211] min-h-screen flex flex-col font-['Plus_Jakarta_Sans',sans-serif]">
+	<body class="bg-[#070708] text-[#f3f4f6] min-h-screen flex flex-col font-['Plus_Jakarta_Sans',sans-serif] selection:bg-[#a855f7] selection:text-white antialiased">
 		
+		<!-- Navbar -->
 		<Navbar />
 
+		<!-- Main Content Slot -->
 		<main class="flex-grow">
 			<slot />
 		</main>
 
+		<!-- Footer -->
 		<Footer />
 
 	</body>
